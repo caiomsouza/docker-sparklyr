@@ -1,3 +1,4 @@
+FROM ubuntu:16.04
 FROM java:8
 FROM r-base:3.3.2
 FROM python:2.7.8
@@ -10,11 +11,11 @@ MAINTAINER Caio Moreno de Souza "caiomsouza@gmail.com"
 USER root
 
 # Define timezone
-#ENV TIMEZONE "America/Sao_Paulo"
+ENV TIMEZONE "America/Sao_Paulo"
 #ENV TIMEZONE "Europe/Madrid"
 
-#RUN echo $TIMEZONE > /etc/timezone && \
-#    dpkg-reconfigure -f noninteractive tzdata
+RUN echo $TIMEZONE > /etc/timezone && \
+    dpkg-reconfigure -f noninteractive tzdata
 
 # Install maven
 RUN apt-get update
