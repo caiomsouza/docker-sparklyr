@@ -12,9 +12,9 @@ USER root
 
 # Timezones: https://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/timezone.html
 # Set the timezone.
-ENV TZ "Europe/Madrid"
-RUN echo $TZ | tee /etc/timezone
-RUN dpkg-reconfigure --frontend noninteractive tzdata
+#ENV TZ "Europe/Madrid"
+#RUN echo $TZ | tee /etc/timezone
+#RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 
 
