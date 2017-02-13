@@ -1,4 +1,4 @@
-#FROM ubuntu:16.04
+FROM ubuntu:16.04
 #FROM java:8
 #FROM r-base:3.3.2
 #FROM python:2.7.8
@@ -10,6 +10,7 @@ ENV NPL_HOME /opt/npl_home
 
 USER root
 
+# Timezones: https://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/timezone.html
 # Set the timezone.
 RUN sudo echo "Europe/Madrid" > /etc/timezone
 RUN sudo dpkg-reconfigure -f noninteractive tzdata
