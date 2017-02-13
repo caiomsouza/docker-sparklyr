@@ -10,11 +10,11 @@ MAINTAINER Caio Moreno de Souza "caiomsouza@gmail.com"
 USER root
 
 # Define timezone
-ENV TIMEZONE "America/Sao_Paulo"
+#ENV TIMEZONE "America/Sao_Paulo"
 #ENV TIMEZONE "Europe/Madrid"
 
-RUN echo $TIMEZONE > /etc/timezone && \
-    dpkg-reconfigure -f noninteractive tzdata
+#RUN echo $TIMEZONE > /etc/timezone && \
+#    dpkg-reconfigure -f noninteractive tzdata
 
 # Install maven
 RUN apt-get update
