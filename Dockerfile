@@ -19,11 +19,11 @@ USER root
 
 
 # Install maven
-RUN apt-get update
-RUN apt-get install -y maven
+#RUN apt-get update
+#RUN apt-get install -y maven
 
 # Install wget
-RUN apt-get -y install wget git
+#RUN apt-get -y install wget git
 
 
 # Install NLTK
