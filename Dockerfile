@@ -10,20 +10,28 @@ ENV NPL_HOME /opt/npl_home
 
 USER root
 
+# Try 1 with Timezone
 # Timezones: https://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/timezone.html
 # Set the timezone.
 #RUN sudo echo "Europe/Madrid" > /etc/timezone
 #RUN sudo dpkg-reconfigure -f noninteractive tzdata
 
+# Try 2 with Timezone
+#ENV TZ=Europe/Madrid RUN echo $TZ | tee /etc/timezone RUN dpkg-reconfigure --frontend noninteractive tzdata
 
-ENV TZ=Europe/Madrid RUN echo $TZ | tee /etc/timezone RUN dpkg-reconfigure --frontend noninteractive tzdata
+# Try 3 with Timezone
+ENV TZ "Europe/Madrid"
+RUN echo $TZ | tee /etc/timezone
+RUN dpkg-reconfigure --frontend noninteractive tzdata
 
+
+# Try 4 with Timezone
 # Define timezone
 #ENV TIMEZONE "America/Sao_Paulo"
 #ENV TIMEZONE "Europe/Madrid"
-
 #RUN echo $TIMEZONE > /etc/timezone && \
 #    dpkg-reconfigure -f noninteractive tzdata
+
 
 # Install maven
 #RUN apt-get update
