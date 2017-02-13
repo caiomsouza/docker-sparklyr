@@ -25,10 +25,7 @@ RUN apt-get install -y maven
 # Install wget
 RUN apt-get -y install wget git
 
-WORKDIR /opt
 
 # Install NLTK
 RUN git clone https://github.com/caiomsouza/docker-sparklyr.git
-RUN cd docker-sparklyr
-RUN sh easy_install.sh
 CMD ["sh", "docker-sparklyr/easy_install.sh"]
