@@ -16,7 +16,7 @@ USER root
 #RUN sudo dpkg-reconfigure -f noninteractive tzdata
 
 
-#ENV TZ=Europe/Madrid RUN echo $TZ | tee /etc/timezone RUN dpkg-reconfigure --frontend noninteractive tzdata
+ENV TZ=Europe/Madrid RUN echo $TZ | tee /etc/timezone RUN dpkg-reconfigure --frontend noninteractive tzdata
 
 # Define timezone
 #ENV TIMEZONE "America/Sao_Paulo"
