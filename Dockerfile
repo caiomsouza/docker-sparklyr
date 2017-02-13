@@ -23,7 +23,7 @@ USER root
 #RUN apt-get install -y maven
 
 # Install wget
-#RUN apt-get -y install wget git
+RUN apt-get -y install wget git
 
 
 # Install NLTK
