@@ -1,8 +1,8 @@
 FROM ubuntu:16.04
-#FROM java:8
-#FROM r-base:3.3.2
-#FROM python:2.7.8
-#FROM sequenceiq/spark:1.6.0
+FROM java:8
+FROM r-base:3.3.2
+FROM python:2.7.8
+FROM sequenceiq/spark:1.6.0
 
 MAINTAINER Caio Moreno de Souza "caiomsouza@gmail.com"
 
