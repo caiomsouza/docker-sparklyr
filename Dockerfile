@@ -1,6 +1,7 @@
+FROM java:8
 FROM r-base:3.3.2
 FROM python:2.7.8
-FROM spark:1.6.0
+FROM sequenceiq/spark:1.6.0
 
 MAINTAINER Caio Moreno de Souza "caiomsouza@gmail.com"
 
@@ -14,6 +15,10 @@ ENV TIMEZONE "Europe/Madrid"
 
 RUN echo $TIMEZONE > /etc/timezone && \
     dpkg-reconfigure -f noninteractive tzdata
+
+# Install maven
+RUN apt-get update
+RUN apt-get install -y maven
 
 # Install wget
 RUN apt-get -y install wget git
